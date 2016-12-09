@@ -31,7 +31,7 @@ function toggleDoor() {
 
 function openDoor() {
     if (doorState === "CLOSED") {
-        //doorPinWrite.writeSync(0);
+        doorPinWrite.writeSync(0);
         doorState = "OPEN";
         console.log('Door open now');
     }
@@ -39,7 +39,7 @@ function openDoor() {
 
 function closeDoor() {
     if (doorState === "OPEN") {
-        //	doorPinWrite.writeSync(1);
+        doorPinWrite.writeSync(1);
         doorState = "CLOSED";
         console.log('Door closed now');
 
