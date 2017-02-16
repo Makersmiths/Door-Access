@@ -6,9 +6,9 @@ var path = __dirname + '/views/';
 var path1 = require('path');
 var http = require('http');
 var config = require('config');
-/*var GPIO = require('onoff').Gpio,
+var GPIO = require('onoff').Gpio,
 	doorPinWrite = new GPIO(17, 'out');
-*/
+
 var fs = require('fs');
 var twilio = require('twilio');
 var bodyParser = require('body-parser');
@@ -31,7 +31,7 @@ function toggleDoor() {
 
 function openDoor() {
     if (doorState === "CLOSED") {
-        doorPinWrite.writeSync(0);
+        doorPinWrite.writeSync(1);
         doorState = "OPEN";
         console.log('Door open now');
     }
@@ -39,7 +39,7 @@ function openDoor() {
 
 function closeDoor() {
     if (doorState === "OPEN") {
-        doorPinWrite.writeSync(1);
+        doorPinWrite.writeSync(0);
         doorState = "CLOSED";
         console.log('Door closed now');
 
