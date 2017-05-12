@@ -25,3 +25,4 @@ b) to open the door use: /open/1234567890   where the number is your phone numbe
 
 Note:
 If you do not get a text with the PIN to access, you should still be able to test this by using the PIN printed on the server log.
+KA
